@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:BlindMaze"
+             x:Class="BlindMaze.MainPage">
+
+
+    <StackLayout x:Name="Geral" Padding="30" >
+
+        <StackLayout x:Name="Score" VerticalOptions="Start" HorizontalOptions="Fill">
+            <Grid RowSpacing="0" ColumnSpacing="0">
+                <Label Text="0" Grid.Column="0" Grid.Row="0" x:Name="lblContadorMovimentos" FontSize="40" ></Label>
+                <Button Text="Começar" Grid.Column="1" Grid.Row="0" x:Name="btnStart" Clicked="Start_Clicked"></Button> 
+            </Grid>
+        </StackLayout>
+
+        <StackLayout x:Name="Informacao" VerticalOptions="CenterAndExpand" HorizontalOptions="FillAndExpand">
+            <Label Text="20" x:Name="lblDicas" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" HorizontalTextAlignment="Center"></Label>
+        </StackLayout>
+
+        <StackLayout x:Name="Botoes" VerticalOptions="End" HorizontalOptions="Fill" >
+            <Button Text="Ir Para Frente" Clicked="Ahead_Clicked" x:Name="btnAhead"></Button>
+            <Button Text="Ir Para Trás" Clicked="Back_Clicked" x:Name="btnBack"></Button>
+            <Button Text="Ir Para Direita" Clicked="Right_Clicked" x:Name="btnRight"></Button>
+            <Button Text="Ir Para Esquerda" Clicked="Left_Clicked" x:Name="btnLeft"></Button>
+        </StackLayout>
+        
+    </StackLayout>  
+    
+</ContentPage>
